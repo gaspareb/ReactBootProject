@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:  
+  ui: 
+    container_name: ui-container
+    image: ui
+    build: 
+      context: .
+    ports: 
+      -  3000: 3000
+    networks:
+      springboot-mysql-net:
+     
+networks:
+  springboot-mysql-net:
